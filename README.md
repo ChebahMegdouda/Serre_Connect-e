@@ -1,2 +1,2 @@
-# Serre_Connect-e
+# Serre_Connectee
 Projet pour la serre connectée
