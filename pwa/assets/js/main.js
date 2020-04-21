@@ -3,7 +3,16 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+/*
+mettre en place une pwa
+*/
+window.onload = () => {
+'use strict';
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker
+.register('./sw.js');
+}
+}
 (function($) {
 
 	var	$window = $(window),

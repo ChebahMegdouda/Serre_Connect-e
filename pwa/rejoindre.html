@@ -5,12 +5,28 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
+	<head>   
 		<title>Twenty by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="manifest" href="manifest.json">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="images/hello-icon-152.png">
+		<meta name="theme-color" content="white"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Hello World">
+		<meta name="msapplication-TileImage" content="images/hello-icon-144.png">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		
+
+		<!-- cdn 
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="index is-preload">
 		<div id="page-wrapper">
@@ -20,25 +36,28 @@
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="index.html">Accueil</a></li>
-							<li class="current"><a href="qsmn.html">Qui sommes nous ?</a></li>
-							<li class="current"><a href="index.html">Nous rejoindre</a></li> 
+							<li class="current"><a href="qsn.html">Qui sommes nous ?</a></li>
+							<li class="current"><a href="rejoindre.html">Nous rejoindre</a></li> 
 							<li class="current"><a href="contact.html">Contactez nous</a></li> 
 							<li class="submenu current">
 								<a href="#">Mon profil</a>
 								<ul>
-									<li><a href="left-sidebar.html">Mon compte</a></li>
+									<li><a href="compte.html">Mon compte</a></li>
 									<li><a href="messagerie.html">Ma messagerie</a></li>
-									<li><a href="no-sidebar.html">Gérer ma serre</a></li>
+									<li><a href="listerintervention.html">Interventions</a></li>
+									<li><a href="gerermaserre.html">Gérer ma serre</a></li>
+									<li><a href="changerstatu.html">Changer mon statut</a></li>
 									<li class="submenu">
-										<a href="#">Changer mon statu</a>
+										<a href="#">Administration</a>
 										<ul>
-											<li><a href="#">Devenir contributeur</a></li>
-											<li><a href="#">Devenir bénévole</a></li>
-											<li><a href="#">Devenir bénéficieur</a></li>
-										</ul>
+											<li><a href="intervention.html">Ajouter une intervetion</a></li>
+											<li><a href="supprimerintervention.html">Supprimer une intervention</a></li>
+											<li><a href="modifierintervention.html">Modifier une intervention</a></li>
+											<li><a href="listerintervention.html">Lister toutes les interventions</a></li>
+										</ul>	
 									</li> 
+							<li><a href="singupin.html" class="button primary">Sign Up/sing In</a></li>
 
-							<li><a href="signUpIn.html" class="button primary">Sign Up/sing In</a></li>
 						</ul>
 					</nav>
 				</li>
@@ -57,7 +76,10 @@
 					</header> -->
 
 					<!-- One -->
+					<article id="main">
+					
 						<section class="wrapper style4 container">
+					
 
 							<!-- Content -->
 								<div class="content">
@@ -65,10 +87,16 @@
 										<header>
 											<p> </p>
 										</header>
-										<p><strong>Vous voulez faire partie de notre communauté?</strong></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+										<p><strong>Vous voulez faire partie de notre communauté?</strong></br>La communauté NETFOOD dispose actuellement de 8 serres dans paris, dévéloppement une variété de fruits et légumes( <a href="serre1.html"> serre Cuvier,  </a><a href="serre2.html"> serre Auteuil,  </a><a href="serre3.html"> serre Arbalète,  </a><a href="serre4.html"> serre Charenton,  </a><a href="serre5.html"> serre Aubervilliers,  </a><a href="serre6.html">  serre de la Montagne</a> ).</p>
+										<p>Vous souhaitez rejoindre NETFOOD ? Venez comme vous etes, notre application gère elle meme la maintenance de nos serres. Il existe trois type d'utilisateur. 
+											<ul>
+												<li> Bénéficieur : Il concerne les abonnées souhaitant recevoir vers la fin de chaque mois d'un panier de fruit et légumes sans contribuer à la maintenance de la serre. 
+												</li>
+												<li> Contributeur : Il concerne les abonnées souhaitant à la fois contribuer à la maintenance de la serre et bénéficier vers la fin de chaque mois d'une panier de fruits et légumes. 
+												</li>
+												<li> Bénévole : Il concerne les abonnées souhaitant contribuer à la maintenance de la serre à titre bénévole.
+												</li>
+											</ul>La demande se fait via un formulaire. Vous recevrez ensuite une numéro d'identification vous permettant de créer votre compte NETFOOD.</p>
 										<div class="formulaire">
 											<a href="formulaire.html" class="button primary">connexion</a>
 										</div>
@@ -76,6 +104,8 @@
 								</div>
 
 						</section>
+					</article>
+				
 
 					<!-- Two -->
 					<!--
@@ -132,20 +162,21 @@
 				</article>
 
 			<!-- Footer -->
-		-->
+		
 				<footer id="footer">
+
+					<ul class="copyright">
+						<li>Rejoignez nous !</li>
+					</ul>
 
 					<ul class="icons">
 						<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
 						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
 					</ul>
 
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					
 
 				</footer>
 
@@ -155,7 +186,6 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
