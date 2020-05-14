@@ -48,7 +48,7 @@ if(password_verify($_POST['mdp'],$resultat['mdp'])){?>
 <article id="main">
         <section style="background-color: green" class="wrapper style4 container">
 	<?php 
-	echo"Bienvenu sur votre espace ".$_SESSION['prenom']; ?>
+	echo"Bienvenu sur votre espace ! ".$_SESSION['prenom']; ?>
 </section>
 </article>
 <?php } else{ ?>
