@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</div>
-	<?php  echo"bienvenu ".$_SESSION['prenom']; ?>
+	<?php  echo"bienveenu ".$_SESSION['prenom']; ?>
 
 <?php if(isset($_POST["submit"])){
 		?>			
