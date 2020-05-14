@@ -1,9 +1,9 @@
-var cacheName = 'NETFOOD';
+var cacheName = 'NetFood';
 var filesToCache = [
 './',
-'./index.html',
+'./index.php',
 './assets/css/main.css',
-'./assets/js/main.js'
+'./js/main.js'
 ];
 /* Démarrer le service worker et mettre en cache tout le contenu de l'application
 */

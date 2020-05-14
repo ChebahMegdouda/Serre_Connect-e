@@ -1,4 +1,4 @@
- @import url("fontawesome-all.min.css");
+@import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
 
 /*
@@ -52,11 +52,11 @@ table {
 }
 
 body {
-	-webkit-text-size-adjust:;
+	-webkit-text-size-adjust: none;
 }
 
 mark {
-	background-color:;
+	background-color: transparent;
 	color: inherit;
 }
 
@@ -1878,7 +1878,6 @@ input, select, textarea {
 			.image.featured img {
 				display: block;
 				width: 100%;
-				
 			}
 
 /* Icon */
@@ -2070,10 +2069,13 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		color:green;
 	}
 
 		ul.buttons:last-child {
 			margin-bottom: 0;
+			color:green;
+	}
 		}
 
 		ul.buttons li {
@@ -2170,7 +2172,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			background: green;
-			border-color: green;
+			border-color: #83d3c9;
 			color: #fff !important;
 		}
 
@@ -2179,8 +2181,8 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background: green !important;
-				border-color: green !important;
+				background: #96dad1 !important;
+				border-color: #96dad1 !important;
 			}
 
 		input[type="button"].fit,
@@ -2302,7 +2304,8 @@ input, select, textarea {
 	}
 
 	#header {
-		box-shadow: 0 1px 2px 0;
+		background: #fff;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		color: inherit;
 		cursor: default;
 		font-size: 0.8em;
@@ -2312,13 +2315,11 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		z-index: 10000;
-		
 	}
 
 		#header h1 {
 			font-weight: 900;
 			margin: 0;
-
 		}
 
 			#header h1 span {
@@ -2331,7 +2332,7 @@ input, select, textarea {
 			right: 1.5em;
 			text-transform: uppercase;
 			top: 0.75em;
-
+			color :green;
 		}
 
 			#header nav ul {
@@ -2343,8 +2344,6 @@ input, select, textarea {
 					display: inline-block;
 					margin-left: 1.5em;
 					padding-left: 0;
-					color:green;
-					padding-top: 10px;
 				}
 
 					#header nav ul li > ul {
@@ -2531,6 +2530,7 @@ input, select, textarea {
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
+		background-color: #645862;
 		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
@@ -2539,6 +2539,7 @@ input, select, textarea {
 		cursor: default;
 		padding: 6em 0;
 		text-align: center;
+
 	}
 
 		#banner .inner {
@@ -2550,6 +2551,7 @@ input, select, textarea {
 			-webkit-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
+			color: #fff;
 			display: inline-block;
 			opacity: 0;
 			padding: 3em;
@@ -2647,8 +2649,6 @@ input, select, textarea {
 		color: #7c8081;
 		padding: 5em 5em 10em 5em;
 		text-align: center;
-
-
 	}
 
 		#footer .copyright {
@@ -3344,15 +3344,14 @@ input, select, textarea {
 
 	}
 
-	#header nav{
-		background-color:#e0f6c7;
-		margin-right: 200px;
-		height: 60px;
-	
+	button[type="button"]{
+		margin-left: 10px;
+
 	}
 
+	#lancerbtn{
+		margin-top: 10px;
+		
+	}
 
-
-#cnx{
-	text-align:center;
-}
+	
