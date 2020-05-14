@@ -54,7 +54,7 @@ if(password_verify($_POST['mdp'],$resultat['mdp'])){?>
 <?php } else{ ?>
 <article id="main">
         <section style="background-color: green" class="wrapper style4 container">
-	<p> connexion échouéé,<a href="index.php?page=0">veuillez réassayer</a>
+	<p> connexion échouéée,<a href="index.php?page=0">veuillez réassayer</a>
 </section>
 </article
  <?php  
