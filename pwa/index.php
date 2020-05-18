@@ -6,6 +6,7 @@ require_once("pages/config.php");
 $db = new Mypdo();
 $inscription = new InscriptionManager($db); 
 $paniermanager = new PanierManager($db); 
+$interventionmanager = new InterventionManager($db); 
 
 if (isset($_SESSION['prenom'])){
 	require_once("pages/header2.php");

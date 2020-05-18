@@ -21,7 +21,7 @@ $inscriptionmanager = new InscriptionManager($db);
 </div>
 <div class="d-flex justify-content-center">
 	<div class="form-group col-4">
-      <label for="inputPassword4">Confirmation</label>
+      <label for="inputPassword4">Mot de passe</label>
       <input type="password" style="background-color:white" class="form-control" name="mdp" placeholder="Mot de passe">
     </div>
 
@@ -43,18 +43,39 @@ $req->execute(array(
 $resultat = $req->fetch();
 
 $_SESSION['prenom']=$resultat['prenom']; 
+$_SESSION['nom']=$resultat['nom'];
+$_SESSION['statu']=$resultat['statu'];  
+
 
 if(password_verify($_POST['mdp'],$resultat['mdp'])){?>
 <article id="main">
         <section style="background-color: green" class="wrapper style4 container">
-	<?php 
-	echo"Bienvenu sur votre espace ".$_SESSION['prenom']; ?>
+	</p>
+ 	 <article id="main">
+				<section class="wrapper style4 container">
+				<?php echo"bienvenu : ".$_SESSION['prenom']; ?> 
+				</section> 
+			</article>
+			<script>
+	setTimeout('Redirect()',1000);
+function Redirect()
+{
+	location.href = 'index.php?page=1';
+}
+</script> 
 </section>
 </article>
 <?php } else{ ?>
 <article id="main">
         <section style="background-color: green" class="wrapper style4 container">
-	<p> connexion échouéée,<a href="index.php?page=0">veuillez réassayer</a>
+	<p> connexion échouéée</p>
+		<script>
+		setTimeout('Redirect()',1000);
+function Redirect()
+{
+	location.href = './index.php';
+}
+</script>
 </section>
 </article
  <?php  
@@ -63,15 +84,4 @@ if(password_verify($_POST['mdp'],$resultat['mdp'])){?>
 
 }
 
- } } else { ?>
- 	<article id="main">
-				<section class="wrapper style4 container">
-				<?php echo"bienvenu ".$_SESSION['prenom']; ?> 
-				</section> 
-			</article>
-
-
- <?php }
-?>
-
-
+ } }?>

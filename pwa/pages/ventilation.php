@@ -22,17 +22,84 @@
 </div>
 </div></br>
 
-<label> choisir min/heure </label> 
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">30min</div>
-</div></br>
 <div class="custom-control custom-switch" style="width:30%; margin:auto;">
   <input type="checkbox" class="custom-control-input" id="customSwitch1">
   <label class="custom-control-label" for="customSwitch1">Ventilation</label>
 </div></br>
-<div class="col-10"style="width:70%; margin:auto;">
-<button type="button" class="btn btn-primary ">Valider</button>
+<div class="d-flex justify-content-center">
+    <button id="lancerbtn" onclick="start()" type="button" value="lancer  " class="btn btn-success ">lancer</button></br>
 </div>
+<div class="d-flex justify-content-center">
+    <button id="lancerbtn" onclick="pause()" type="button" value="arreter" class="btn btn-success "> pause</button>
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="compteur"><strong >0:00:00:00</strong> </div>
+</div>
+<div class="d-flex justify-content-center">
+     <button id="lancerbtn" onclick="stop()" type="button" value="arreter" class="btn btn-success "> arreter</button>
+  </div>
+<div class="d-flex justify-content-center">
+    <button id="lancerbtn" onclick="restart()" type="button" value="arreter" class="btn btn-success "> redémarrer</button>
+</div>
+
+
+
+
+<script type="text/javascript">
+  
+  var ms = 0, s =0, m=0;
+  var timer; 
+  var compteur=document.querySelector('.compteur'); 
+  function start(){
+if (!timer){
+  timer= setInterval(run,10);
+}
+  }
+ function run(){
+    compteur.textContent= geTimer();
+
+    ms++;
+    if(ms == 100){
+      ms = 0; 
+      s++
+    }
+     if(s == 60){
+      s = 0; 
+      m++
+     }
+
+ }
+
+ function geTimer(){
+      return (m <10 ? "0" + m: m) + ":"+(s <10 ? "0" + s : s) +":" + (ms<10 ? "0" + ms:ms);
+ }
+ function pause(){
+  stopTimer();
+ }
+
+ function restart(){
+  pause();
+  start();
+ }
+
+ function pause(){
+  stopTimer();
+ }
+
+ function stop(){
+  stopTimer();
+  ms =0;
+  s=0;
+  m =0;
+  compteur.textContent=getTimer();
+ }
+ function stopTimer(){
+  clearInterval(timer); 
+  timer=false;
+ }
+</script>
+
 
 				</section>
 			</article>

@@ -6,6 +6,7 @@ class Inscription{
 	private $mdp;
   private $adresse;
   private $email;
+  private $statu;
  
 
 	public function __construct($valeurs = array()){
@@ -35,6 +36,9 @@ public function affecte($donnees){
         case 'adresse':
           $this->setAdresse($valeur);
         break;
+        case 'statu':
+          $this->setStatu($valeur);
+        break;
       }
     }
   }
@@ -53,6 +57,9 @@ public function affecte($donnees){
 
   public function setPrenom($prenom){
     $this->prenom = $prenom;
+  }
+  public function setStatu($statu){
+    $this->statu = $statu;
   }
 
   public function setEmail($email){
@@ -80,6 +87,9 @@ public function affecte($donnees){
   }
   public function getMdp(){
     return $this->mdp;
+  }
+  public function getStatu(){
+    return $this->statu;
   }
 
 

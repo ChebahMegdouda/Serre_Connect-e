@@ -58,8 +58,14 @@
 										</ul>	
 									</li> 
 									<li><a href="index.php?page=8">remplir mon panier</a></li>
-									<li><a href="index.php?page=10">Changer mon statut</a></li>
+									<li><a href="index.php?page=13">Changer mon statut</a></li>
 									<li><a href="index.php?page=9">exit</a></li>
+									<li class="submenu">
+										<a href="#">administrateur</a>
+										<ul>
+											<li><a href="index.php?page=12">ajout intervention</a></li>
+										</ul>	
+									</li> 
 
 							
 

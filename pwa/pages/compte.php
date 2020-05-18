@@ -7,33 +7,23 @@
 			<div class="image_outer_container">
 				<div class="green_icon"></div>
 				<div class="image_inner_container">
-					<img src="images/profil.png">
+					<img src="images/douda.png">
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php  echo"bienvenu ".$_SESSION['prenom']; ?>
+ 
+	<p> <?php  echo"bienvenu ".$_SESSION['prenom']." "; ?></p>
 
-<?php if(isset($_POST["submit"])){
-		?>			
-	<form method="POST" action ="#" enctype="multipart/form-data">
-		<input type="file" name="avatar"/>
-		<input type="submit" name="submit"/>
-	</form> <?php  } else{
-	 echo $_FILES['avatar']['name'];
-	  
-}?>
+  <p> Nom : <?php echo" ".$_SESSION['prenom']." ".$_SESSION['nom']." " ;?></p>
+  <p> Statu : <?php echo" ".$_SESSION['statu']; ?></p>
 
-
-
-
-
-				</section> 
+	  	</section> 
 			</article>
 
 	<style>
 		  .container{
-       	height: 100%;
+       	height: 60%;
        	align-content: center;
        }
 
