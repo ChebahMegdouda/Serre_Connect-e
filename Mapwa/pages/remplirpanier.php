@@ -178,7 +178,9 @@ $paniermanager->add($panier);
 <article id="main">
 				<section class="wrapper style4 container"><?php 
 echo "Nous avons bien enregistré votre panier cher ".$_SESSION['prenom'].", Il vous sera livré à la fin du mois, à votre adresse."
-?> </section></article>
+?></br> 
+<?php echo $val ?>
+ </section></article>
 <?php }
 ?>
 

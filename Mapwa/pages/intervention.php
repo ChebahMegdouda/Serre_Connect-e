@@ -1,15 +1,20 @@
+<?php 
+$db= new Mypdo(); 
+$interventionmanager = new InterventionManager($db); ?> 
 <article id="main">
 				<section class="wrapper style4 container">
+ 
 					<div class="row">
 					<div class="col-sm-6" style="margin:auto;">
 						<h2> Ajouter une intervention </h2>
 					</div>
 				</div>
-			<form>
+<?php if(empty($_POST["titre"])){ ?>
+<form method="POST" action="#">
 				<div class="row">
 	<div class="col-6">
 <label>choisir la serre : </label>
-<select class="custom-select">
+<select name="serre" class="custom-select">
   <option value="1">Serre Cuvier</option>
   <option value="2">Serre Anteuil</option>
   <option value="3">Serre Aubervilliers</option>
@@ -18,55 +23,60 @@
   <option value="6">Serre Arbalète</option>
 </select>
 </div>
-<div class="col-6">
-<label>choisir la salle : </label>
-<select class="custom-select">
-  <option value="1">Salle 1</option>
-  <option value="2">Salle 2</option>
-  <option value="3">Salle 3</option>
-</select>
-</div>
+ <div class='col-6'>
+      <label for="inputNom">titre</label>
+      <input name="titre "type="text" class="form-control" placeholder="Titre">
+    </div>
 </div></br>
-<label for="meeting-time">Choisir la date et heure:</label>
-
 <div class="row">
         <div class='col-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-         <div class="col-6">
-	<input class="form-control" type="text" placeholder="Titre">
-</div>
+      <label for="inputNom">Date</label>
+      <input name="date "type="text" class="form-control" placeholder="Date">
     </div>
+</div>
+
    
 <div class="col-6">
  <div class="form-group">
     <label for="exampleFormControlInput1">Nombre intervenant</label>
-    <input type="number" class="form-control" id="nbrintervenant" placeholder="0">
+    <input type="number" name="nbr"class="form-control" id="nbrintervenant" placeholder="0">
   </div>
 </div>
 	<div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" id="description" rows="3"></textarea>
+    <textarea name="description"class="form-control" id="description" rows="3"></textarea>
   </div></br>
 
   
-  </form>		
+ 	
 <div class="row">
-					<div class="col-lg-3" style="margin: auto;">
-	<a href="singupin.html" class="button primary">Ajouter</a></br>
-</div>
-			</section>
+          <div class="col-sm-3" style="margin: auto;">
+  <input type="submit" value="valider" class="button primary"></input></br>
+</div>  
+ </div>
+ </form>
+
+<?} else {
+
+  $intervention= new Intervention(
+        array(
+          'titre' => $_POST['titre'],
+          'descriptif' => $_POST['description'],
+          'nbrint'=> $_POST['nbr'],
+          'serre' => $_POST['serre'],
+          'date'=>$_POST['date']
+      
+  )   
+);
+
+$message= "ajout&eacute;"; 
+$interventionmanager->add($intervention);?>
+
+<article id="main">
+        <section class="wrapper style4 container">
+  <?php echo "l'intervention ".$_POST['titre']." a été ajouté;" ?>
+ <?php }
+		?>	
+</section>
 			</article>
 	

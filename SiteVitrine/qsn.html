@@ -53,16 +53,48 @@
 										<header>
 											<h3>Qui sommes nous ?</h3>
 										</header>
-										<p>Our license degree project is on connected greenhouses. Several fruit and vegetable greenhouses have been set up in several districts of Paris in order to overcome food insecurity. To do, Megdouda CHEBAH and Sofiane KARAR are developing NETFOOD, a mobile application that can make these greenhouses connected for considerable productivity, at an affordable price and a better follow-up from the people who will be subscribed to it.A network of connected greenhouses will then be formed. Hence the : Net. As for "food", it means "Food" in English.</p>
+										<div class="contenu">
+										<p>Our license degree project is on connected greenhouses. Several fruit and vegetable greenhouses have been set up in several districts of Paris in order to overcome food insecurity. To do, Megdouda CHEBAH and Sofiane KARAR are developing NETFOOD, a mobile application that can make these greenhouses connected for considerable productivity, at an affordable price and a better follow-up from the people who will be subscribed to it.A network of connected greenhouses will then be formed. Hence the : Net. As for "food", it means "Food" in English.
+										</p></div>
+									</p>
+										<div class="contenu2">
 										<p>Our target audience is divided into three parts in society, the first and second one are the subscribers who wish to participate in the maintenance of greenhouses, the first on a voluntary basis and the other not.finally, the third one who are the most deprived who will be able to subscribe to our
-										application for free. At the end of each month, Netfood benefits to our subscribers the opportunity to currently enjoy a considerable variety of fruits and vegetables harvest. </p>
+										application for free. At the end of each month, Netfood benefits to our subscribers the opportunity to currently enjoy a considerable variety of fruits and vegetables harvest. </p></div></p>
+											<div class="contenu3">
 										<p>The particularity of our application is that it manages the maintenance of the greenhouse itself, in just a few clicks you can manage temperature, air, water, light, etc. so anyone could use it.
 										The main goal of NetFood is to enable every family to become food self-sufficient. We are counting on you to join us, to take up this challenge together!</p>
-									</section>
-								</div>
+									</div>
+									</div>
+									
+								
+						<div class="d-flex justify-content-center">
+							<button id="english" onclick="français()" type="button" value="arreter" class="btn btn-success "> français</button>
+							<button id="english" onclick="english()" type="button" value="arreter" class="btn btn-success "> anglais</button>
+						</div>
 
 						</section>
 					</article>
+
+	<script type="text/javascript">
+		function français(){
+			var contenu=document.querySelector('.contenu'); 
+			var contenu2=document.querySelector('.contenu2'); 
+			var contenu3=document.querySelector('.contenu3'); 
+			contenu.textContent= " Actuellement en France, près d’un français sur cinq est en précarité alimentaire. Pour stopper ce problème plusieurs serres de fruits et de légumes ont été installées dans plusieurs quartiers de Paris. Megdouda CHEBAH et Sofiane KARAR développent NETFOOD, une application mobile qui permet de connecter ces serres pour une productivité considérable, à un prix abordable et un meilleur suivi des personnes qui y seront abonnées.Un réseau de serres connectées sera alors développé, d’où le mot Net.et “food” qui signifie “aliments” en anglais.";
+
+			contenu2.textContent="La particularité de notre application est qu’elle gère l’entretien de la serre elle-même. En quelques clics, vous pourrez gérer la température, l’air,l’eau, la lumière, etc....Avec nos serres écologiques sans OGM ni pesticides, elles seront autonomes et productives de produits de bonnes qualités.";
+			contenu3.textContent="Nous espérons atteindre l’objectif principal, de permettre à chaque famille de devenir autosuffisante sur le plan alimentaire.Nous comptons sur vous pour nous rejoindre, pour relever ensemble ce défi !";
+		}
+		function english(){
+			var contenu=document.querySelector('.contenu'); 
+			var contenu2=document.querySelector('.contenu2'); 
+			var contenu3=document.querySelector('.contenu3'); 
+			contenu.textContent= "Our license degree project is on connected greenhouses. Several fruit and vegetable greenhouses have been set up in several districts of Paris in order to overcome food insecurity. To do, Megdouda CHEBAH and Sofiane KARAR are developing NETFOOD, a mobile application that can make these greenhouses connected for considerable productivity, at an affordable price and a better follow-up from the people who will be subscribed to it.A network of connected greenhouses will then be formed. Hence the : Net. As for :food , it means Food in English.";
+
+			contenu2.textContent="Our target audience is divided into three parts in society, the first and second one are the subscribers who wish to participate in the maintenance of greenhouses, the first on a voluntary basis and the other not.finally, the third one who are the most deprived who will be able to subscribe to our application for free. At the end of each month, Netfood benefits to our subscribers the opportunity to currently enjoy a considerable variety of fruits and vegetables harvest. .";
+			contenu3.textContent="The particularity of our application is that it manages the maintenance of the greenhouse itself, in just a few clicks you can manage temperature, air, water, light, etc. so anyone could use it.The main goal of NetFood is to enable every family to become food self-sufficient. We are counting on you to join us, to take up this challenge together!";
+		}
+	</script>
 	<footer id="footer">
 
 					<ul class="copyright">

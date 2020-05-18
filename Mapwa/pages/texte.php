@@ -55,6 +55,16 @@ case 10:
 	// inclure ici la page affichage article
 	include_once('inscription.php');
 	break;
+case 11:
+	// inclure ici la page affichage article
+	include_once('exemple.php');
+	break;
+case 12: 
+	include_once('intervention.php');
+	break;
+case 13: 
+	include_once('changerstatu.php');
+	break;
 default : 	include_once('accueil.php');
 }
 	

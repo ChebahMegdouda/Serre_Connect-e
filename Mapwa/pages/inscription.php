@@ -33,9 +33,13 @@ $inscriptionmanager = new InscriptionManager($db);
     </div>
 </div>
   <div class="form-group">
-    <label for="inputAddress2">Identifiant d'inscription</label>
-    <input type="text" class="form-control" placeholder="Identifiant reçu suite à l'intégration de NetFood">
-  </div>
+      <label for="inputState">Vous souhaitez nous rejoindre à titre : </label>
+      <select id="inputState" class="form-control" name="statu">
+        <option selected value="Contributeur">Contributeur</option>
+        <option selected value="benevole">Bénévole</option>
+        <option selected value="beneficiaire">Bénéficiair</option>
+      </select>
+    </div>
   <div class="form-group">
     <label for="inputAddress">Addresse</label>
     <input type="text" class="form-control" name="adresse" placeholder="123 Boulevard de charonne"></br>
@@ -53,7 +57,8 @@ $inscriptionmanager = new InscriptionManager($db);
           'prenom'=>$_POST['prenom'],
           'mdp'=>$pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT),
           'email' => $_POST['email'],
-          'adresse'=> $_POST['adresse']
+          'adresse'=> $_POST['adresse'],
+          'statu' => $_POST['statu']
       
   )   
 );
